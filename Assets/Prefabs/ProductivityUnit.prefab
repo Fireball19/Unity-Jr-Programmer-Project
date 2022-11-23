@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4755593536528632556}
   - component: {fileID: 4755593536528632559}
+  - component: {fileID: 4890638820117273195}
   - component: {fileID: 4755593536528632544}
   m_Layer: 0
   m_Name: ProductivityUnit
@@ -28,6 +29,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.499, y: 1.073, z: 3.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5077239432413412539}
   m_Father: {fileID: 0}
@@ -47,6 +49,19 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4890638820117273195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4755593536528632546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bb7cfd373941994f85427efc2e0e16f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 3
 --- !u!195 &4755593536528632544
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -69,32 +84,6 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &4461556829649990687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5565933406504297985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42691e03fb73de54090e4be70c173690, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TintRenderer: {fileID: 5616824906384290118}
-  TintMaterialSlot: 0
---- !u!114 &4755593538226756444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5565933406504297985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a63ccd0d44a3548afa695c53838fea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &4755593538226756432
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -156,16 +145,42 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 6ddc2dbc741535f40ac3d385f69a638f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bff3e8b6628bea488b595c8ffe0e63e, type: 3}
---- !u!1 &5565933406504297985 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3bff3e8b6628bea488b595c8ffe0e63e, type: 3}
-  m_PrefabInstance: {fileID: 4755593538226756432}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5077239432413412539 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3bff3e8b6628bea488b595c8ffe0e63e, type: 3}
   m_PrefabInstance: {fileID: 4755593538226756432}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5565933406504297985 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3bff3e8b6628bea488b595c8ffe0e63e, type: 3}
+  m_PrefabInstance: {fileID: 4755593538226756432}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4461556829649990687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5565933406504297985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42691e03fb73de54090e4be70c173690, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TintRenderer: {fileID: 5616824906384290118}
+  TintMaterialSlot: 0
+--- !u!114 &4755593538226756444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5565933406504297985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9a63ccd0d44a3548afa695c53838fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!137 &5616824906384290118 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 868556316773984790, guid: 3bff3e8b6628bea488b595c8ffe0e63e, type: 3}
